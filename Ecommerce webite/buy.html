@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            border:white 2px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border:white 2px;
+            
+            width: 300px;
+            margin: 0 auto;
+            margin-top: -520px;
+            margin-right: 80px;
+        }
+        #a1{
+    height:500px;
+            width: 800px;
+            margin-right:450px;
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        #submit{
+            height: 40px;
+            width: 100px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    padding-bottom:3px;
+}
+
+/* Add hover effect styles */
+#submit:hover {
+    background-color: #0056b3; /* Change background color on hover */
+    transform: scale(1.05); /* Scale the button slightly on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow on hover */
+}
+    </style>
+</head>
+<body>
+    <img id="a1" src="https://i0.wp.com/www.alphr.com/wp-content/uploads/2019/12/Amazon-Keeps-Logging-Me-Out-What-to-Do.jpg?fit=1000%2C563&ssl=1" title="WELCOME TO AMAZON">
+    <div class="container">
+        <h2>Payment Information</h2>
+        <form name="myForm" id="paymentForm">
+            <div class="form-group">
+                <label for="product_id">Product_ID:</label>
+                <input type="text" id="cardholder" name="cardholder" required>
+            </div>
+            <div class="form-group">
+                <label for="cardholder">Cardholder Name:</label>
+                <input type="text" id="cardholder" name="cardholder" required>
+            </div>
+            <div class="form-group">
+                <label for="cardnumber">Card Number:</label>
+                <input type="text" id="cardnumber" name="cardnumber" required>
+            </div>
+            <div class="form-group">
+                <label for="expiry">Expiry Date (MM/YYYY):</label>
+                <input type="date"  data-date-inline-picker="true" id="expiry" name="expiry" placeholder="MM/YYYY" required>
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="text" id="ammount" name="ammount" pattern="[0-9]*" required>
+            </div>
+            <center>
+                <div class="form-group">
+                <input type="submit" id="submit" value="Pay">
+            </div>
+            </center>
+        </form>
+    </div>
+</div>
+    <script>
+        document.getElementById("paymentForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent the form from submitting
+
+    // Simulate a successful payment (you can replace this with actual payment processing)
+    setTimeout(function () {
+        openSuccessPage();
+    }, 2000); // Simulate a 2-second delay
+
+    // You can send payment data to your server for processing here
+
+    // Optionally, show a loading message while processing the payment
+    showLoadingMessage();
+});
+
+function openSuccessPage() {
+    // Open a new page and display the payment success message
+    document.write("<h1>Payment successfull!!</h1>");
+}
+
+function showLoadingMessage() {
+    // You can show a loading message or animation here
+    alert("Processing payment...");
+}
+
+    </script>
+</body>
+</html>

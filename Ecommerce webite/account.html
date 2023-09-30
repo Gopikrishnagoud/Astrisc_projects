@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: white;
+        }
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: -500px;
+            margin-left: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        #add1{
+            height: 40px;
+            width: 350px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    padding-bottom:3px;
+}
+
+/* Add hover effect styles */
+#add1:hover {
+    background-color: #0056b3; /* Change background color on hover */
+    transform: scale(1.05); /* Scale the button slightly on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow on hover */
+}
+#a1{
+    height:500px;
+            width: 800px;
+            margin-left:450px;
+            margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+    <img id="a1" src="https://i0.wp.com/www.alphr.com/wp-content/uploads/2019/12/Amazon-Keeps-Logging-Me-Out-What-to-Do.jpg?fit=1000%2C563&ssl=1">
+    <div class="container">
+        <h2>Create Account</h2>
+        <form action="login.html" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phnpo">PH_no:</label>
+                <input type="text" id="em" name="ph" pattern="[0-9]*" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" id="add1" value="Create Account">
+            </div>
+        </form>
+    </div>
+    <script>
+        function checkAlphabets() {
+            const inputElement = document.getElementById("textInput");
+            const resultElement = document.getElementById("result");
+            
+            const inputValue = inputElement.value;
+            
+            // Regular expression to check for alphabetic characters
+            const alphabeticPattern = /^[A-Za-z]+$/;
+            
+            if (alphabeticPattern.test(inputValue)) {
+                resultElement.textContent = "Input contains only alphabetic characters.";
+            } else {
+                resultElement.textContent = "Input contains non-alphabetic characters.";
+            }
+        }
+    </script>
+</body>
+</html>
