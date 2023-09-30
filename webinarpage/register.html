@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body{
+            background-color: black;
+        }
+#are{
+    color: white;
+    font-size: 30px;
+    border:3px;
+    margin-top: 100px;
+}
+#submit{
+            height: 35px;
+            width: 90px;
+    background-color:white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    padding-bottom:3px;
+}
+
+/* Add hover effect styles */
+#submit:hover {
+    background-color: #0056b3; /* Change background color on hover */
+    transform: scale(1.05); /* Scale the button slightly on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow on hover */
+}
+input{
+            font-size: medium;
+        }
+#box{
+  font-size:50px;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes example {
+    0% { color: red; }
+            50% { color: yellow; }
+            100% { color: white; }
+}
+    </style>
+</head>
+<body>
+<form id="paymentForm">
+    <center>
+        <h1 id="box">⚠Registration Closes soon⚠</h1>
+    <table id="are" border="2px">
+        <tr>
+            <td>first Name:</td>
+            <td><input type="text" required></td>
+        </tr>
+        <tr>
+            <td>last Name:</td>
+            <td><input type="text" required></td>
+        </tr>
+        <tr>
+            <td>Email_id:</td>
+            <td><input type="email" required></td>
+        </tr>
+        <tr>
+            <td>Phone number:</td>
+            <td><input type="text" pattern="[0-9]*"  required></td>
+        </tr>
+        <tr>
+            <td> Age:</td>
+            <td><input type="text" pattern="[0-9]*" required></td>
+        </tr>
+        <tr>
+            <td> Gender:</td>
+            <td>
+                <input type="radio" value="m" name="gender" required/> Male
+                <input type="radio" value="f" name="gender" required/> Female
+            </td>
+        </tr>
+        <tr>
+            <td>Id proof:</td>
+            <td><input type="file" name="image" required /></td>
+        </tr>
+        <tr>
+            <td><input type="submit" id="submit"/></td>
+            <td><input type="reset" id="submit"/></td>
+        </tr>
+    </table>
+</center>
+</form>
+<script>
+    document.getElementById("paymentForm").addEventListener("submit", function (e) {
+e.preventDefault(); // Prevent the form from submitting
+
+// Simulate a successful payment (you can replace this with actual payment processing)
+setTimeout(function () {
+    openSuccessPage();
+}, 2000); // Simulate a 2-second delay
+
+// You can send payment data to your server for processing here
+
+// Optionally, show a loading message while processing the payment
+showLoadingMessage();
+});
+
+function openSuccessPage() {
+// Open a new page and display the payment success message
+document.write("<h1>Registartion successfull!!</h1>");
+}
+
+function showLoadingMessage() {
+// You can show a loading message or animation here
+alert("Processing...");
+}
+
+</script>
+</body>
+</html>

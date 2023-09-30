@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT</title>
+    <style>
+        body {
+          overflow:auto;
+          overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+}
+#apple{
+  animation-name: example;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+@keyframes example {
+  0%{color: violet; text-decoration: underline;}
+  25% {color:darkgreen;}
+  50%{color:aqua;  text-decoration: underline;}
+  75%{color:blue}
+  100%{color:white ; text-shadow: 2px 2px black;  text-decoration: underline;}
+}
+
+
+nav {
+  background-color: #333;
+  color::white;
+  padding: 20px;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero Section */
+header {
+  padding: 50px;
+  text-align: center;
+  background-color:white;
+}
+
+/* About Me Section */
+#about {
+  padding: 50px;
+  text-align: center;
+  background-color: white;
+  
+}
+/* Skills Section */
+#guide {
+  padding: 50px;
+  background-color: white;
+  text-align: center;
+  
+}
+#le {
+  padding: 50px;
+  background-color: white;
+  text-align: center;
+ 
+}
+/* Contact Section */
+#contact {
+  padding: 50px;
+  text-align: center;
+  background-color:white;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+}
+h1{
+  font-size:30px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-shadow: #333;
+}
+
+#wet{
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold ;
+  text-transform: capitalize;
+  text-align: left;
+}
+#express{
+  border:black 2px solid;
+  font-size: 18px;
+  text-transform: capitalize;
+  text-align: left;
+}
+#box{
+  font-size:20px;
+  background-color:whitesmoke;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  margin: 10px 20px;
+}
+@keyframes example {
+  0%{color:black; text-decoration: underline;}
+  25% {color:darkgreen;}
+  50%{color:aqua;  text-decoration: underline;}
+  75%{color:blue}
+  
+}
+table {
+            border: 2px solid grey; /* Set border width and color */
+            border-radius: 15px;
+          }
+
+        th, td {
+            padding: 8px; /* Add padding for cell content */
+        }
+</style>
+</head>
+<body>
+    <nav>
+      <marquee onmouseover="this.stop();" onmouseout="this.start();" scrollamount="20px"> 
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#guide">guide</a></li>
+            <li><a href="#le">What you learned</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </marquee>
+        </ul>
+    </nav>
+    <header>
+           <h1 id="apple">Welcome to wonderful event</h1>   
+    </header>
+
+    <section id="about">
+        <h1>About</h1>
+      <table id="we1">
+        <tr>
+          <td><img src="https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto,w_800/https%3A%2F%2Fmedia.insider.in%2Fimage%2Fupload%2Fc_crop%2Cg_custom%2Fv1620107359%2Frbm8qwgvjyowvufltq0m.png" alt="error"</td>
+      <td>
+        <div id="wet">
+          <ul type="square">
+          <li><p>Webinar on Time Management!</p></li>
+          <li><p>on 3rd October 2023 at 11:00 am</p></li>
+          <li><p>registartion closes on 30th september</p></li>
+          <li><p>Note!:this event is Free and Anyone can attend</p></li>
+            <li><button type="button" id="box" onclick="alert('Link is copied to clipboard')"> Share </button></li>
+          <li>
+          <form  method="post" action="register.html">
+            <button type="submit" id="box">Register</buttop>
+          </form>
+          </li>
+          </ul>
+        </div>
+      </td>
+        </tr>
+      </table>
+      <h1>Do You Feel this problem</h1>
+      <div id="express">
+        <ul type="circle">
+          <li><p>Do you find yourself overloaded with work? Feel you can't set priorities? Exhaust yourself daily without accomplishing something meaningful? </p></li>
+          <li><p>There are 35% Australians and 44% Americans suffer through stress. The biggest challenge for everyone is having a long To-Do List and not having the Time Management Skills for Stress-Free Results.</p></li>
+          <li><p>There are 168 hours each week. With Work,classes, activities, Study, Family and Entertainment, planning becomes essential to get things done</p></li>
+        </ul>
+      </div>
+    </section>
+    <section id="guide">
+      <h1>Guide</h1>
+      <div id="express">
+       <ul type="circle">
+  <li>Related to motivation</li>
+  <li>You learn Time Management</li>
+  <li>family friendly</li>
+  <li>Language:-English</li>
+  <li>available:- in Hindi,Telugu And other Languages </li>
+</ul> 
+      </div>
+    </section>
+
+    <section id="le">
+      <h1>you will be learning</h1>
+      <div id="express">
+       <ul type="circle">
+  <li>What, Why & How of Time Management.</li>
+  <li>Goal Setting.</li>
+  <li>Prioritising your tasks or to-do list.</li>
+  <li>Daily & Weekly Time Scheduling.</li>
+  <li>4 most popular time management techniques.</li>
+</ul> 
+      </div>
+    </section>
+
+    <section id="contact">
+      <h1>Contact</h1>
+      <div id="express">
+  <ul type="circle">
+  <li>Number: 9638527410 </li>
+  <li><button type="button" onclick="alert('Please Wait')"> FaceBook</button> </li>
+  <li><button type="button" onclick="alert('Please Wait')"> Instagram</button></li>
+  <li><button type="button" onclick="alert('Please Wait')"> Gmail</button> </li>
+       </ul> 
+      </div>
+     
+    </section>
+
+    <script>    
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+      });
+      // Form submission handling
+      document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        // You can add code here to handle form submission, such as sending an email or storing the data.
+        // For demonstration purposes, let's log the form data to the console.
+        const formData = new FormData(this);
+        console.log('Form data:', Object.fromEntries(formData));
+        // Clear the form inputs
+        this.reset();
+      });
+          </script>
+</body>
+</html>
